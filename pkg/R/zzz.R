@@ -15,6 +15,12 @@ print.quantmodEnv <- function(x, ...) {
   packageStartupMessage("Version 0.4-0 included new data defaults. See ?getSymbols.")
   # --as-cran check is complaining of this, as a NOTE
   #attach(NULL, name='.quantmodEnv')  
+
+  repo <- "https://github.com/joshuaulrich/quantmod"
+  packageStartupMessage(
+    "WARNING: this package was installed from R-Forge, but development has\n",
+    "moved to GitHub. Please re-install the package using the GitHub repo at:\n",
+    repo, ".")
 }
 
 setOldClass("zoo");
